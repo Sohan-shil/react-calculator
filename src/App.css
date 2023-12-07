@@ -66,5 +66,5 @@ color: #9f9e9e;
 }
 
 .calculator .operator {
-    color: #099dfa ;
+    color: #099dfa !important ;
 }

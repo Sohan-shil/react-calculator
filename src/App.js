@@ -61,7 +61,7 @@ const App = () => {
           {["AC", "DEL", "%", "/"].map((value) => (
             <button
               key={value}
-              className={`operator ${value.toLowerCase()}`}
+              className={`btn ${value === "AC" ? "clear" : "operator"}`}
               onClick={() => handleButtonClick(value)}
             >
               {value}
@@ -72,7 +72,7 @@ const App = () => {
           {[7, 8, 9, "*"].map((value) => (
             <button
               key={value}
-              className="btn"
+              className={`btn ${value === "*" ? "operator" : ""}`}
               onClick={() => handleButtonClick(String(value))}
             >
               {value}
@@ -83,7 +83,7 @@ const App = () => {
           {[4, 5, 6, "-"].map((value) => (
             <button
               key={value}
-              className="btn"
+              className={`btn ${value === "-" ? "operator" : ""}`}
               onClick={() => handleButtonClick(String(value))}
             >
               {value}
@@ -94,7 +94,7 @@ const App = () => {
           {[1, 2, 3, "+"].map((value) => (
             <button
               key={value}
-              className="btn"
+              className={`btn ${value === "+" ? "operator" : ""}`}
               onClick={() => handleButtonClick(String(value))}
             >
               {value}
